@@ -1,0 +1,23 @@
+
+.header-box {
+    -fx-background-color: rgba(255, 255, 255, 0.68);  /* 30% transparent white */
+    -fx-border-radius: 15px;                         /* Rounded corners for border */
+    -fx-background-radius: 15px;                     /* Rounded corners for background */
+    -fx-padding: 20px;                               /* Inner spacing */
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+}
+
+.textfield {
+    -fx-background-color: #fff
+}
+
+.skyblue-button {
+    -fx-background-color: #2d359e;     /* Sky blue background */
+    -fx-font-size: 14px;               /* Font size */
+    -fx-padding: 8px 16px;             /* Padding for better look */
+    -fx-background-radius: 6px;        /* Rounded corners */
+    -fx-border-color: #0a0f4f;         /* Blue border */
+    -fx-border-width: 0.5px;             /* Border thickness */
+    -fx-border-radius: 6px;            /* Match the background radius */
+    -fx-cursor: hand;                  /* Pointer cursor on hover */
+}

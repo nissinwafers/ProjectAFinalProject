@@ -2,7 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,8 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojecta.RegisterController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -19,10 +20,10 @@
                <children>
                   <ImageView fitHeight="136.0" fitWidth="216.0" layoutX="57.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../../Downloads/uclogo_yellow.png" />
+                        <Image url="@img/uclogo_yellow.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="sign_signupButton" layoutX="41.0" layoutY="339.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="247.0" text="Sign Up" />
+                  <Button fx:id="register_loginButton" layoutX="41.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleBackToLogin" prefHeight="38.0" prefWidth="247.0" text="Login" />
                   <Label layoutX="107.0" layoutY="304.0" text="Create Account" textFill="#666060">
                      <font>
                         <Font size="17.0" />
@@ -32,28 +33,19 @@
             </AnchorPane>
             <AnchorPane layoutX="318.0" prefHeight="410.0" prefWidth="314.0" style="-fx-background-color: #154d94;">
                <children>
-                  <Label layoutX="37.0" layoutY="66.0" text="Login Account" textFill="WHITE">
+                  <Label layoutX="37.0" layoutY="53.0" text="Register Account" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="login_idnumber" layoutX="37.0" layoutY="143.0" prefHeight="30.0" prefWidth="247.0" promptText="ID Number" />
-                  <TextField fx:id="login_password" layoutX="37.0" layoutY="190.0" prefHeight="30.0" prefWidth="247.0" promptText="Password" />
-                  <Button fx:id="login_loginButton" layoutX="37.0" layoutY="265.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="247.0" text="Login" />
-                  <CheckBox layoutX="183.0" layoutY="235.0" mnemonicParsing="false" text="Remember Me" textFill="WHITE" />
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="410.0" prefWidth="321.0" style="-fx-background-color: #154d94;" visible="false">
-               <children>
-                  <Label layoutX="37.0" layoutY="66.0" text="Register Account" textFill="WHITE">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="sign_idnumber" layoutX="37.0" layoutY="143.0" prefHeight="30.0" prefWidth="247.0" promptText="ID Number" />
-                  <TextField fx:id="sign_password" layoutX="37.0" layoutY="190.0" prefHeight="30.0" prefWidth="247.0" promptText="Password" />
-                  <Button fx:id="sign_signButton" layoutX="37.0" layoutY="265.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="247.0" text="Sign Up" />
-                  <CheckBox layoutX="183.0" layoutY="235.0" mnemonicParsing="false" text="Remember Me" textFill="WHITE" />
+                  <ComboBox fx:id="register_roleComboBox" layoutX="37.0" layoutY="106.0" prefHeight="30.0" prefWidth="247.0" promptText="Select Role" />
+                  <TextField fx:id="register_idnumber" layoutX="37.0" layoutY="146.0" prefHeight="30.0" prefWidth="247.0" promptText="ID Number or username" />
+                  <PasswordField fx:id="register_password" layoutX="37.0" layoutY="186.0" prefHeight="30.0" prefWidth="247.0" />
+                  <TextField fx:id="register_passvisible" layoutX="37.0" layoutY="186.0" prefHeight="30.0" prefWidth="247.0" promptText="Password" />
+                  <PasswordField fx:id="register_confirmm" layoutX="37.0" layoutY="228.0" prefHeight="30.0" prefWidth="247.0" />
+                  <TextField fx:id="register_confirmvisible" layoutX="37.0" layoutY="228.0" prefHeight="30.0" prefWidth="247.0" promptText="Confirm Password" />
+                  <CheckBox fx:id="register_showPassword" layoutX="37.0" layoutY="266.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" prefHeight="2.0" prefWidth="115.0" text="Show Password" textFill="WHITE" />
+                  <Button fx:id="register_registerButton" layoutX="37.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="38.0" prefWidth="247.0" text="Register" />
                </children>
             </AnchorPane>
          </children>

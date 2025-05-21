@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1280.0" style="-fx-background-color: #f4fcff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojecta.TeacherGradeController">
+   <children>
+      <ImageView fitHeight="677.0" fitWidth="1070.0" layoutX="210.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/unibg.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-12.0" layoutY="71.0" prefHeight="678.0" prefWidth="226.0" style="-fx-background-color: #133aa9;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" layoutX="38.0" layoutY="25.0" prefHeight="18.0" prefWidth="167.0" style="-fx-text-fill: #fff;" text="WELCOME, PROFESSOR" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="70.0" layoutY="45.0" prefHeight="18.0" prefWidth="104.0" style="-fx-text-fill: #fff;" text=" FACULTY    |    CCS" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Line endX="166.10000610351562" layoutX="61.0" layoutY="87.0" startX="-49.00000762939453" stroke="WHITE" />
+            <Button layoutX="8.0" layoutY="93.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="222.0" style="-fx-background-color: #fef101;">
+               <graphic>
+                  <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="22.0" prefWidth="185.0">
+                     <children>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="22.0" fitWidth="22.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/teacher.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="22.0" prefWidth="111.0" text="Grade Students" textFill="#7b7171">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <HBox layoutX="9.0" layoutY="91.0" prefHeight="28.0" prefWidth="221.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane blendMode="SRC_ATOP" layoutX="-6.0" layoutY="-15.0" prefHeight="51.0" prefWidth="1287.0" style="-fx-background-color: #fff;">
+         <effect>
+            <Blend />
+         </effect>
+         <children>
+            <VBox layoutX="25.0" layoutY="21.0" prefHeight="51.0" prefWidth="139.0">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/uc_logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="194.0" layoutY="23.0" prefHeight="58.0" prefWidth="318.0">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="356.0" text="UNIVERSITY OF CEBU PORTAL">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="logoutButton" layoutX="1136.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="28.0" prefWidth="111.0" styleClass="skyblue-button" stylesheets="@css/style.css" textFill="WHITE">
+               <graphic>
+                  <HBox prefHeight="21.0" prefWidth="66.0">
+                     <children>
+                        <ImageView blendMode="OVERLAY" fitHeight="26.0" fitWidth="20.0" opacity="0.92" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="16.0" prefWidth="74.0" style="-fx-text-fill: #ffffff;" text="Logout" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="65.0" prefHeight="9.0" prefWidth="1280.0" style="-fx-background-color: #fef101;" />
+      <AnchorPane layoutX="251.0" layoutY="98.0" prefHeight="624.0" prefWidth="998.0" styleClass="header-box" stylesheets="@css/style.css" AnchorPane.bottomAnchor="26.600000000000023" AnchorPane.leftAnchor="251.19999999999993" AnchorPane.rightAnchor="30.600000000000023" AnchorPane.topAnchor="98.0">
+         <children>
+            <HBox layoutX="24.0" layoutY="15.0" prefHeight="44.0" prefWidth="274.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="37.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/dash.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="44.0" prefWidth="218.0" text="Grade Students">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="37.0" layoutY="134.0" prefHeight="403.0" prefWidth="926.0">
+               <children>
+                  <TableView fx:id="gradesInputTableView" prefHeight="318.0" prefWidth="926.0" style="-fx-border-color: #b6bce7;">
+                     <columns>
+                        <TableColumn fx:id="idNumberColumn" prefWidth="141.6000099182129" text="ID Number" />
+                        <TableColumn fx:id="courseCodeColumn" prefWidth="289.3332061767578" text="Course Code" />
+                        <TableColumn fx:id="gradeColumn" prefWidth="289.3332061767578" text="Grade" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox layoutX="39.0" layoutY="347.0" prefHeight="202.0" prefWidth="926.0" />
+            <HBox layoutX="25.0" layoutY="292.0" prefHeight="44.0" prefWidth="274.0" />
+            <VBox layoutX="47.0" layoutY="67.0" prefHeight="54.0" prefWidth="173.0" spacing="5.0">
+               <children>
+                  <Label text="Course Code (*)" />
+                  <ComboBox fx:id="courseCodeComboBox" prefHeight="26.0" prefWidth="172.0" />
+               </children>
+            </VBox>
+            <Button fx:id="submitGradesButton" layoutX="416.0" layoutY="555.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="222.0" styleClass="blue-button" stylesheets="@../../../../../../../EvaluationSystemFinal/src/main/resources/com/example/evaluationsystemfinal/css/style.css" text="SUBMIT GRADES" textFill="WHITE" />
+            <HBox layoutX="232.0" layoutY="79.0" prefHeight="40.0" prefWidth="239.0">
+               <children>
+                  <Button fx:id="enterButton" mnemonicParsing="false" onAction="#handleEnterButton" prefHeight="38.0" prefWidth="90.0" styleClass="skyblue-button" stylesheets="@css/style.css" text="Enter" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>
